@@ -8,7 +8,7 @@ class BMPMaker
     @width = (w || 256).to_i
     @height = (h || 256).to_i
 
-    @pixel_ary = Array.new(@width) { Array.new(@height) }
+    @pixel_ary = Array.new(@height) { Array.new(@width) }
     @red, @green, @blue = red, green, blue
 
     print_expressions
@@ -42,7 +42,7 @@ class BMPMaker
 
   def blue(x,y)
     return eval(@blue) if @blue && @blue != ""
-    2**0.5 * dist(x,y) * (256.0/@width)
+    2**0.5 * 256.0/@width * dist(x,y)
   end
 
   def print_expressions
@@ -52,8 +52,8 @@ class BMPMaker
   end
 
   def fill_pixel_array
-    (0...@width).each do |x|
-      (0...@height).each { |y| @pixel_ary[x][y] = f(x,y) }
+    (0...@height).each do |y|
+      (0...@width).each { |x| @pixel_ary[y][x] = f(x,y) }
     end
   end
 
@@ -69,9 +69,14 @@ class BMPMaker
     Math.sqrt(x**2 + y**2)
   end
 
-  def normalize(value)
+  def cos(value)
     value %= 256
     128 * (Math.cos(2 * 3.1415*value/256) + 1)
+  end
+
+  def sin(value)
+    value %= 256
+    128 * (Math.sin(2 * 3.1415*value/256) + 1)
   end
 
 end
