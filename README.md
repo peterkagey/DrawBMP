@@ -6,11 +6,11 @@ Clone this repo and run `ruby script/bmp.rb` (with optional arguments) in the pr
 
 ## CLI
 `ruby script/bmp.rb "x+y" "y-x" "dist(x,y)" 512 512`  
-The [propreantepenultimate](https://en.wiktionary.org/wiki/propreantepenultimate) argument is a ruby expression of red brightness (mod 256).  
-The [preantepenultimate](https://en.wiktionary.org/wiki/preantepenultimate) argument is a ruby expression of green brightness (mod 256).  
-The [antipentulimate](https://en.wiktionary.org/wiki/antipentulimate) argument is a ruby expression of blue brightness (mod 256).  
-The [penultimate](https://en.wiktionary.org/wiki/penultimate) argument is the width of the canvas.  
-The [ultimate](https://en.wiktionary.org/wiki/ultimate) argument is the height of the canvas.
+The [propreantepenultimate](http://bit.ly/1QrQ3UQ) argument is a ruby expression of red brightness (mod 256).  
+The [preantepenultimate](http://bit.ly/1QrQ3UQ) argument is a ruby expression of green brightness (mod 256).  
+The [antipentulimate](http://bit.ly/1QrQ3UQ) argument is a ruby expression of blue brightness (mod 256).  
+The [penultimate](http://bit.ly/1QrQ3UQ) argument is the width of the canvas.  
+The [ultimate](http://bit.ly/1QrQ3UQ) argument is the height of the canvas.
 
 ## Valid expressions
 You can use any valid ruby expression. `x` and `y` are defined as the horizontal and veritcal pixel distance from the lower left corner. `height` and `width` are the height and width of the canvas in pixels.
