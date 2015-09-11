@@ -45,7 +45,7 @@ The canvas generally gets more red as the x value gets greater. Notice that red 
 ![](https://github.com/peterokagey/DrawBMP/blob/master/images/example_2.bmp?raw=true)  
 If an argument is left blank (as `""`) the default expression or value is used. In this case the default value for blue is:  
 `2**0.5 * 256.0/@width * dist(x,y)`.  
-Thus we see a quarter circle starting in the lower right corner.
+Thus we see a quarter circle starting in the lower left corner.
 
 ##### Example 3:
 `ruby script/bmp.rb "255 * ((Time.now.to_f * 1000) % 1)" "red(x,y)" "red(x,y)" 300 256`  
