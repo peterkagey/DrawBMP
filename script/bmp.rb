@@ -31,18 +31,33 @@ class BMPMaker
   end
 
   def red(x,y)
-    return eval(@red) if @red && @red != ""
-    2**0.5 * dist(x - @width, y - @height) * (256.0/@width)
+    if @red.is_a?(Proc)
+      @red[x,y]
+    else
+      return eval(@red) if @red && @red != ""
+      # default
+      2**0.5 * dist(x - @width, y - @height) * (256.0/@width)
+    end
   end
 
   def green(x,y)
-    return eval(@green) if @green && @green != ""
-    x + y > @width * 0.8 && x + y < @width * 1.2 ? 0x90 : 0x40
+    if @green.is_a?(Proc)
+      @green[x,y]
+    else
+      return eval(@green) if @green && @green != ""
+      # default
+      x + y > @width * 0.8 && x + y < @width * 1.2 ? 0x90 : 0x40
+    end
   end
 
   def blue(x,y)
-    return eval(@blue) if @blue && @blue != ""
-    2**0.5 * 256.0/@width * dist(x,y)
+    if @green.is_a?(Proc)
+      @green[x,y]
+    else
+      return eval(@blue) if @blue && @blue != ""
+      # default
+      2**0.5 * 256.0/@width * dist(x,y)
+    end
   end
 
   def print_expressions

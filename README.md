@@ -57,3 +57,10 @@ Setting the blue and green expressions to `"red(x,y)"` effectively makes the ima
 `ruby script/bmp.rb "(5 * y) % [x,0.01].max" "3 * red(x,y)" "255.0/width * x" 500 256`  
 ![](https://github.com/peterokagey/DrawBMP/blob/master/images/example_4.bmp?raw=true)  
 I just thought that this one was cool.
+
+##### Example 5:
+`ruby script/bmp.rb "0" "19*x + 32*y**2 + 23*y" "9*y + 7*x" 100 100`
+<!-- Something close to this: -->
+<!-- Red: 0 -->
+<!-- Green: 19*x + 32*y**2 + 23*y -->
+<!-- Blue: 9*y + 7*x -->
